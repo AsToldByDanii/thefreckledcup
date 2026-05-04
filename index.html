@@ -661,6 +661,33 @@
     }
 
     /* ── BOOKING BANNER ── */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-top: 3rem;
+    }
+
+    .event-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 16px 48px var(--shadow);
+      border: 3px solid var(--parchment);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 64px var(--shadow);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .booking-banner {
       background: var(--forest);
       border-radius: 40px;
@@ -788,7 +815,7 @@
       .hero-inner, .about-grid, .menu-wrap, .booking-banner { grid-template-columns: 1fr; }
       .hero-visuals { grid-template-columns: 1fr 1fr; }
       .photo-owner img, .photo-drinks img { min-height: 300px; }
-      .services-grid { grid-template-columns: 1fr; }
+      .services-grid, .events-grid { grid-template-columns: 1fr; }
       .menu-flyer { position: relative; top: auto; }
       .nav-links { display: none; }
       h1 { font-size: clamp(2.4rem, 8vw, 3.6rem); }
@@ -819,6 +846,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#events">Events</a>
         <a href="#menu">Menu</a>
         <a href="#booking">Book</a>
       </div>
@@ -951,6 +979,25 @@
     </section>
 
     <!-- ── MENU ── -->
+    <section class="section tinted" id="events">
+      <div class="container">
+        <div class="section-label">What's coming up</div>
+        <h2>Upcoming <em>Events</em></h2>
+        <p class="lead">Find The Freckled Cup at a pop-up or event near you — come pull up, grab a cup, and stay a while.</p>
+        <div class="events-grid">
+          <div class="event-card">
+            <img src="event1.png" alt="Avalon Great Neck Pop-Up — Friday May 8, 10AM to 2PM" />
+          </div>
+          <div class="event-card">
+            <img src="event2.png" alt="Avalon Westbury Pop-Up — Saturday May 16" />
+          </div>
+          <div class="event-card">
+            <img src="event3.png" alt="Vendors Wanted — Pre-Juneteenth and Pre-Fathers Day Pop-Up, Sunday June 14" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="menu">
       <div class="container">
         <div class="section-label">Menu preview</div>
@@ -991,10 +1038,10 @@
                 📸 @thefreckledcup on Instagram
               </a>
               <div class="contact-link">
-                ✉️ info@thefreckledcup.com
+                ✉️ hello@thefreckledcup.com
               </div>
               <div class="contact-link">
-                📍 Service area — New York City and Long Island
+                📍 Service area — add your city/region
               </div>
             </div>
           </div>
