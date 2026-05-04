@@ -661,6 +661,44 @@
     }
 
     /* ── BOOKING BANNER ── */
+    .featured-drink {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .featured-img {
+      position: relative;
+      border-radius: 40px 40px 120px 40px;
+      overflow: hidden;
+      box-shadow: 0 40px 90px var(--shadow);
+      border: 4px solid var(--parchment);
+    }
+
+    .featured-img img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 560px;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.4rem;
+      background: var(--caramel);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px var(--shadow);
+    }
+
+    .featured-text { padding-left: 1rem; }
+
     .events-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -815,7 +853,7 @@
       .hero-inner, .about-grid, .menu-wrap, .booking-banner { grid-template-columns: 1fr; }
       .hero-visuals { grid-template-columns: 1fr 1fr; }
       .photo-owner img, .photo-drinks img { min-height: 300px; }
-      .services-grid, .events-grid { grid-template-columns: 1fr; }
+      .services-grid, .events-grid, .featured-drink { grid-template-columns: 1fr; }
       .menu-flyer { position: relative; top: auto; }
       .nav-links { display: none; }
       h1 { font-size: clamp(2.4rem, 8vw, 3.6rem); }
@@ -979,6 +1017,32 @@
     </section>
 
     <!-- ── MENU ── -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="featured-drink">
+          <div class="featured-img">
+            <img src="iced-matcha.png" alt="The Freckled Cup Iced Matcha — Top Seller" />
+            <div class="featured-badge">⭐ Top Seller</div>
+          </div>
+          <div class="featured-text">
+            <div class="section-label">Featured Drink</div>
+            <h2>The one everyone's <em>talking about.</em></h2>
+            <p class="lead">Our Iced Matcha is the drink that stops people mid-sip. Ceremonial-grade matcha, oat milk, and that signature freckled foam — creamy, earthy, and absolutely beautiful in the cup.</p>
+            <ul class="check-list">
+              <li>Ceremonial-grade matcha for a smooth, rich flavor.</li>
+              <li>Made with oat milk for a creamy, lightly sweet finish.</li>
+              <li>Topped with our signature freckled foam.</li>
+              <li>Available at every pop-up and event.</li>
+            </ul>
+            <div style="margin-top:2rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+              <a class="btn btn-primary" href="https://form.jotform.com/261166650342049" target="_blank" rel="noopener">Book the Bar</a>
+              <a class="btn btn-outline" href="#events">See Upcoming Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section tinted" id="events">
       <div class="container">
         <div class="section-label">What's coming up</div>
